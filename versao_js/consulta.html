@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Projetos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Projetos</h1>
+
+        <label for="projetoConsulta">Selecione um Projeto:</label>
+        <select id="projetoConsulta" onchange="consultarProjeto()"></select>
+
+        <h2>Pessoas no Projeto</h2>
+        <ul id="listaPessoasProjeto"></ul>
+
+        <h2>Dados de Viagens</h2>
+        <ul id="listaViagensProjeto"></ul>
+
+        <a href="index.html"><button>Voltar</button></a>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="consulta.js"></script>
+</body>
+</html>

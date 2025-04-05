@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Passagens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Passagens</h1>
+
+        <section id="projeto-section">
+            <h2>Adicionar Projeto</h2>
+            <input type="text" id="nomeProjeto" placeholder="Nome do Projeto">
+            <input type="text" id="dataInicio" placeholder="Inicio do Projeto">
+            <input type="text" id="dataFim" placeholder="Finalização do Projeto">
+            <button onclick="adicionarProjeto()">Adicionar</button>
+            <ul id="listaProjetos"></ul>
+        </section>
+
+        <section id="pessoa-section">
+            <h2>Adicionar Atores / Diretores</h2>
+            <select id="projetoSelect"></select>
+            <input type="text" id="nomePessoa" placeholder="Nome">
+            <select id="tipoPessoa">
+                <option value="Ator">Ator</option>
+                <option value="Diretor">Diretor</option>
+            </select>
+            <button onclick="adicionarPessoa()">Adicionar</button>
+            <ul id="listaPessoas"></ul>
+        </section>
+
+        <section id="viagem-section">
+            <h2>Registrar Viagem</h2>
+            <select id="pessoaSelect"></select>
+            <input type="number" id="precoPassagem" placeholder="Preço da Passagem">
+            <input type="text" id="dadosVoo" placeholder="Dados do Voo">
+            <input type="text" id="trecho" placeholder="Trecho">
+            <input type="text" id="dataVoo" placeholder="Data do voo">
+            <input type="text" id="horario" placeholder="Horario">
+            <input type="text" id="dataEmissao" placeholder="Data de Emissão">
+            <input type="text" id="dataSolicitacao" placeholder="Data de Solicitação">
+            <input type="text" id="dataComplemento" placeholder="Reserva">
+            <button onclick="registrarViagem()">Registrar</button>
+            <ul id="listaViagens"></ul>
+        </section>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
