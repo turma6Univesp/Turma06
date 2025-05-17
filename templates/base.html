@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Projetos e Voos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <nav>
+                <ul>
+                    <!-- Links apontam para as âncoras das seções -->
+                    <li><a href="{{ url_for('index', _anchor='cadastro-projeto') }}">Cadastrar Projeto</a></li>
+                    <li><a href="{{ url_for('index', _anchor='cadastro-elenco') }}">Cadastrar Elenco</a></li>
+                    <li><a href="{{ url_for('index', _anchor='cadastro-voo') }}">Cadastrar Voo</a></li>
+                    <li><a href="{{ url_for('index', _anchor='consulta-voo') }}">Consultar Voos</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <!-- Mensagens Flash -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Bloco de conteúdo que será preenchido por index.html -->
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- Script JS carregado no final para melhor performance -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

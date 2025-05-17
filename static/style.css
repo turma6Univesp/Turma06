@@ -1,0 +1,297 @@
+/* Reset básico e fontes */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #f8f9fa; /* Cor de fundo mais suave */
+    color: #212529; /* Cor de texto padrão */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Rolagem suave para âncoras */
+}
+
+/* Layout principal com Flexbox */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: 240px; /* Um pouco mais largo */
+    background-color: #343a40; /* Cinza escuro */
+    color: #dee2e6; /* Cor de texto clara */
+    padding: 25px 15px;
+    flex-shrink: 0;
+    position: sticky; /* Mantém a sidebar visível ao rolar */
+    top: 0;
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid #495057; /* Divisor sutil */
+    padding-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar nav ul li a {
+    color: #ced4da; /* Cor do link mais suave */
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    font-size: 0.95em;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a:focus {
+    background-color: #495057; /* Fundo ao passar o mouse */
+    color: #fff; /* Texto branco ao passar o mouse */
+    outline: none; /* Remove outline padrão do foco */
+}
+
+/* Conteúdo Principal */
+.content {
+    flex-grow: 1;
+    padding: 40px; /* Mais espaçamento */
+    background-color: #fff; /* Fundo branco para contraste */
+    overflow-y: auto; /* Adiciona scroll vertical se necessário */
+}
+
+h1 {
+    color: #343a40;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+h2 {
+    color: #0056b3; /* Azul mais escuro para títulos de seção */
+    border-bottom: 2px solid #dee2e6; /* Linha divisória mais clara */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Estilo dos Cards/Seções */
+.card {
+    background-color: #f8f9fa; /* Fundo levemente cinza para cards */
+    padding: 30px;
+    margin-bottom: 40px; /* Mais espaço entre seções */
+    border-radius: 8px;
+    border: 1px solid #e9ecef; /* Borda sutil */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Sombra muito leve */
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #343a40; /* Cor do título do card */
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+/* Formulários */
+.form-group {
+    margin-bottom: 20px; /* Mais espaço entre campos */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* Mais espaço label/input */
+    font-weight: 600; /* Peso da fonte um pouco maior */
+    color: #495057; /* Cor da label */
+    font-size: 0.9em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="number"],
+.form-group input[type="text"][inputmode="decimal"], /* Estilo para input de preço */
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px; /* Padding maior */
+    border: 1px solid #ced4da; /* Borda padrão */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #80bdff; /* Cor da borda no foco */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra no foco (estilo Bootstrap) */
+}
+
+.form-group select[disabled] {
+    background-color: #e9ecef; /* Fundo para selects desabilitados */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px; /* Altura mínima para textarea */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px; /* Botão um pouco maior */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+    display: inline-block; /* Permite definir margens */
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Cor mais escura no hover */
+}
+
+/* Mensagens Flash */
+.flash-messages {
+    margin-bottom: 25px;
+    padding: 0;
+    list-style: none;
+}
+.flash {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 1px solid transparent;
+}
+.flash.success {
+    background-color: #d1e7dd; /* Verde claro (Bootstrap success) */
+    color: #0f5132;
+    border-color: #badbcc;
+}
+.flash.error {
+    background-color: #f8d7da; /* Vermelho claro (Bootstrap danger) */
+    color: #842029;
+    border-color: #f5c2c7;
+}
+.flash.info {
+    background-color: #cff4fc; /* Azul claro (Bootstrap info) */
+    color: #055160;
+    border-color: #b6effb;
+}
+
+
+/* Tabela de Resultados da Consulta */
+#resultado-consulta {
+    margin-top: 30px;
+}
+#resultado-consulta h3 {
+    font-size: 1.2em;
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+#voos-lista .table-responsive {
+    overflow-x: auto; /* Adiciona scroll horizontal se a tabela for larga */
+    margin-top: 15px;
+}
+
+#voos-lista table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    font-size: 0.9em; /* Tamanho de fonte menor para a tabela */
+}
+
+#voos-lista th, #voos-lista td {
+    border: 1px solid #dee2e6;
+    padding: 10px 12px; /* Padding ajustado */
+    text-align: left;
+    vertical-align: middle; /* Alinhamento vertical */
+}
+
+#voos-lista th {
+    background-color: #e9ecef; /* Fundo do cabeçalho */
+    font-weight: 600;
+    color: #495057;
+}
+
+#voos-lista tbody tr:nth-child(odd) {
+    background-color: #f8f9fa; /* Linhas alternadas */
+}
+
+#voos-lista tbody tr:hover {
+    background-color: #e9ecef; /* Fundo da linha no hover */
+}
+
+#voos-lista p { /* Mensagem de "nenhum voo" ou erro */
+    font-style: italic;
+    color: #6c757d; /* Cinza */
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.error-message { /* Estilo específico para mensagens de erro no JS */
+     font-style: normal !important;
+     color: #842029 !important;
+     background-color: #f8d7da !important;
+     border-color: #f5c2c7 !important;
+     font-weight: 500;
+}
+
+/* Responsividade básica */
+@media (max-width: 992px) { /* Breakpoint para tablets e menores */
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static; /* Remove sticky */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para destacar */
+    }
+    .sidebar nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+     .sidebar nav ul li {
+        margin: 5px;
+    }
+    .content {
+        padding: 25px;
+    }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
+}
+
+@media (max-width: 576px) { /* Breakpoint para celulares */
+     .content { padding: 15px; }
+     .card { padding: 20px; }
+     button[type="submit"] { width: 100%; padding: 12px; } /* Botão ocupa largura total */
+     #voos-lista th, #voos-lista td { padding: 8px; font-size: 0.85em;}
+}
