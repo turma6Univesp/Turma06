@@ -4,7 +4,7 @@
 
 ## 🎥 Sistema para Integração e Padronização de Dados de Passagens Aéreas e Equipe de Clientes de Produtora de Audiovisual
 
-Este projeto tem como objetivo oferecer uma solução eficiente para o *registro, controle e monitoramento de passagens e de equipes de cliente* para uma produtora de audiovisual, visando a  integração e padronização inteligente dos dados. Nosso sistema visa a solução das dificuldades administrativas frequentes em controles por planilhas descentralizadas, com uma alternativa moderna baseada em banco de dados que garante segurança, acessibilidade, eficiência operacional e dinamicidade para as operações.
+Este projeto tem como objetivo oferecer uma solução eficiente para o **registro, controle e monitoramento de passagens e de equipes de cliente** para uma produtora de audiovisual, visando a  integração e padronização inteligente dos dados. Nosso sistema visa a solução das dificuldades administrativas frequentes em controles por planilhas descentralizadas, com uma alternativa moderna baseada em banco de dados que garante segurança, acessibilidade, eficiência operacional e dinamicidade para as operações.
 
 ---
 
