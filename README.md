@@ -1,4 +1,4 @@
-<img src="assets/cover.png" alt ="cover" height ="300" width="1000"> 
+<img src="assets/cover.png" alt ="cover" style="max-width: 100%; height:auto;"> 
 
 ---
 
