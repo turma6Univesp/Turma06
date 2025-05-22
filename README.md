@@ -78,6 +78,8 @@ Turma 06/
 │       └── base.html         # Template base
 ```
 
+---
+
 ## 📝 Licença
 
 Este projeto foi desenvolvido para uso educacional como parte de um Projeto Integrador da UNIVESP. 
